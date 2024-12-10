@@ -17,6 +17,10 @@ function menyimpanProduk () {
     var urlGambar= document.getElementById('URL-Produk').value;
     var stokAwal = document.getElementById('Stok-awal').value;
 
+      if (!namaProduk || !hargaProduk || !stokAwal) {
+        alert("Harap isi semua data dengan benar!");
+        return;
+    }
 
     if (modeEdit) {
         //  update produk lama
