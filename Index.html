@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Control</title>
+    <style>@media (max-width: 768px) {
+        .form-container {
+            width: 90%;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .form-group label {
+            flex: 100%;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group select {
+            flex: 100%;
+        }
+
+        #tombol-submit {
+            width: 100%;
+        }
+
+        table {
+            font-size: 12px;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        table {
+            font-size: 10px;
+        }
+
+        .form-container {
+            padding: 10px;
+        }
+
+        .form-group label,
+        .form-group input,
+        .form-group select {
+            flex: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div style="
+        border: 1px solid rgb(10, 10, 10);
+        background-image:linear-gradient(rgb(0, 255, 234),rgb(0, 255, 136));
+        width: fit-content;
+        margin-inline: auto;
+        margin-top: 200px;
+        padding: 50px;
+        border-radius: 35px;
+        ">
+
+        
+    <h1 style="
+    text-align: center;">Form Produk</h1>
+   
+
+    <div style="
+    margin-bottom: 20px;">
+    <label>Kode Produk:</label>
+    <input type="text" id="Kode-Produk" readonly>
+    </div>
+
+
+    <div style="
+    margin-bottom: 20px;">
+    <label>Nama Produk:</label>
+    <input type="text" id="Nama-Produk">
+    </div>
+
+    
+    <div style="margin-bottom: 20px;">
+        <label for="">Harga Produk:</label>
+        <input type="number" id="Harga-Produk">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+    <label>Satuan:</label>
+    <select name="" id="Satuan-Produk">
+        <option value="Pcs">Pcs</option>
+         <option value="Pack">Pack</option>
+    </select>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label >Kategori:</label>
+        <select name="" id="Kategori-Produk">
+        <option value="Makanan Berat">Makanan Berat</option>
+        <option value="Makanan Ringan">Makanan Ringan</option>
+        <option value="Minuman">Minuman</option>
+        </select>
+    </div>
+
+
+    <div style="margin-bottom: 20px;">
+        <label for="">URL Gambar:</label>
+        <input type="text" id="URL-Produk">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <label for="">Stok Awal:</label>
+        <input type="number" id="Stok-awal">
+    </div>
+
+    <div>
+        <button style="
+            display: inline-block;
+            background-color: #00ffaa;
+            border-radius: 15px;
+            width: 100px;
+            height: 33px;
+            margin-left: 79px;
+
+            "id="tombol-submit"
+            onclick="menyimpanProduk()">Submit</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Table Produk -->
+    <table border="1 [x solod black]" style="border-collapse: collapse; margin-inline: auto; text-align: center;">
+        <thead>
+        <tr style="background-color: aqua;">
+            <th>Nomor</th>
+            <th>Kode Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga Produk</th>
+            <th>Satuan</th>
+            <th>Kategori Produk</th>
+            <th>Gambar Produk</th>
+            <th>Stock Awal</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+        <tbody id="isi-data">
+         
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
